@@ -183,13 +183,13 @@ const App = () => {
 		console.log(btnMenu);
 
 		const onBtnMenu = (addHover) => {
-			const buttonMenu = btnMenu.map((btns) => {
-				btns.classList.remove('bg-teal-200');
+			btnMenu.map((btns) => {
+				btns.classList.remove('bg-purple-400');
 			});
-			addHover.classList.add('bg-teal-200');
+			addHover.classList.add('bg-purple-400');
 		};
 
-		const buttonMenu = btnMenu.map((btns) => {
+		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
 				console.log(e.target);
 				onBtnMenu(e.target);
@@ -208,9 +208,9 @@ const App = () => {
 					<div className="bg-purple-800 p-6 mb-6">
 						{quiz[0].questionOne.map((q) => (
 							<div key={q.id}>
-								<div className="flex flex-row items-center btn-menu">
-									<p className="bg-purple-100 p-6 mb-4 text-gray-900">{q.letter}</p>
-									<p className="bg-purple-400 p-4 w-full text-gray-900">{q.question}</p>
+								<div className="btn-menu">
+									{q.letter}
+									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
 							</div>
 						))}
@@ -221,9 +221,9 @@ const App = () => {
 					<div className="bg-red-800 p-6 mb-6">
 						{quiz[1].questionTwo.map((q) => (
 							<div key={q.id}>
-								<div className="flex flex-row items-center">
-									<p className="bg-red-100 p-6 mb-4 text-gray-900">{q.letter}</p>
-									<p className="bg-red-400 p-4 w-full text-gray-900">{q.question}</p>
+								<div className="btn-menu">
+									{q.letter}
+									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
 							</div>
 						))}
@@ -234,9 +234,9 @@ const App = () => {
 					<div className="bg-orange-800 p-6 mb-6">
 						{quiz[2].questionThree.map((q) => (
 							<div key={q.id}>
-								<div className="flex flex-row items-center">
-									<p className="bg-orange-100 p-6 mb-4 text-gray-900">{q.letter}</p>
-									<p className="bg-orange-400 p-4 w-full text-gray-900">{q.question}</p>
+								<div className="btn-menu">
+									{q.letter}
+									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
 							</div>
 						))}
@@ -247,9 +247,9 @@ const App = () => {
 					<div className="bg-yellow-800 p-6 mb-6">
 						{quiz[3].questionFour.map((q) => (
 							<div key={q.id}>
-								<div className="flex flex-row items-center">
-									<p className="bg-yellow-100 p-6 mb-4 text-gray-900">{q.letter}</p>
-									<p className="bg-yellow-400 p-4 w-full text-gray-900">{q.question}</p>
+								<div className="btn-menu">
+									{q.letter}
+									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
 							</div>
 						))}
@@ -260,9 +260,9 @@ const App = () => {
 					<div className="bg-green-800 p-6 mb-6">
 						{quiz[4].questionFive.map((q) => (
 							<div key={q.id}>
-								<div className="flex flex-row items-center">
-									<p className="bg-green-100 p-6 mb-4 text-gray-900">{q.letter}</p>
-									<p className="bg-green-400 p-4 w-full text-gray-900">{q.question}</p>
+								<div className="btn-menu">
+									{q.letter}
+									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
 							</div>
 						))}
@@ -273,9 +273,9 @@ const App = () => {
 					<div className="bg-blue-800 p-6 mb-6">
 						{quiz[5].questionSix.map((q) => (
 							<div key={q.id}>
-								<div className="flex flex-row items-center">
-									<p className="bg-blue-100 p-6 mb-4 text-gray-900">{q.letter}</p>
-									<p className="bg-blue-400 p-4 w-full text-gray-900">{q.question}</p>
+								<div className="btn-menu">
+									{q.letter}
+									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
 							</div>
 						))}
