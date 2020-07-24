@@ -228,7 +228,30 @@ const App = () => {
 		document.querySelector('main').classList.remove('hidden');
 		document.querySelector('.try-again').classList.add('hidden');
 
-		document.querySelector('.bg-purple-800').classList.remove('danger');
+		const removeDanger = (bgClass) => {
+			document.querySelector(bgClass).classList.remove('danger');
+		};
+
+		removeDanger('.bg-purple-800');
+		removeDanger('.bg-red-800');
+		removeDanger('.bg-orange-800');
+		removeDanger('.bg-yellow-800');
+		removeDanger('.bg-green-800');
+		removeDanger('.bg-blue-800');
+
+		const removeSelected = (menuGroup, menuBG) => {
+			const btnMenu = Array.from(document.querySelectorAll(menuGroup));
+
+			btnMenu.map((btns) => {
+				btns.classList.remove(menuBG);
+			});
+		};
+		removeSelected('.btn-menu-purple', 'bg-purple-400');
+		removeSelected('.btn-menu-red', 'bg-red-400');
+		removeSelected('.btn-menu-orange', 'bg-orange-400');
+		removeSelected('.btn-menu-yellow', 'bg-yellow-600');
+		removeSelected('.btn-menu-green', 'bg-green-400');
+		removeSelected('.btn-menu-blue', 'bg-blue-400');
 	};
 
 	// console.log(quiz);
@@ -510,7 +533,7 @@ const App = () => {
 			</main>
 			<section className="container mx-auto bg-gray-100 p-6 total hidden">
 				<section className="mb-6">
-					<h1 className="text-center text-gray-900 text-3xl">
+					<h1 className="text-center text-gray-900 text-4xl">
 						Your final score {total}/<strong>6</strong>
 					</h1>
 				</section>
