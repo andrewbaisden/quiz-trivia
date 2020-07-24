@@ -55,3 +55,7 @@ body {
     background: #FFF5F5;
     padding: 1.3rem;
 }
+
+.danger {
+    border: 0.5rem solid #ed64a6;
+}
