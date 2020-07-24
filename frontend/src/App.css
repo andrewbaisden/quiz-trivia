@@ -33,14 +33,24 @@ body {
     color: #333333;
 }
 
-.btn-menu {
+.btn-menu-purple,
+.btn-menu-red,
+.btn-menu-orange,
+.btn-menu-yellow,
+.btn-menu-green,
+.btn-menu-blue {
     cursor: pointer;
     padding: 1.3rem;
     color: #ffffff;
     border: 0.1rem solid #333333;
 }
 
-.btn-menu::first-letter {
+.btn-menu-purple::first-letter,
+.btn-menu-red::first-letter,
+.btn-menu-orange::first-letter,
+.btn-menu-yellow::first-letter,
+.btn-menu-green::first-letter,
+.btn-menu-blue::first-letter {
     color: #1a202c;
     background: #FFF5F5;
     padding: 1.3rem;

@@ -4,7 +4,12 @@ import './App.css';
 
 const App = () => {
 	useEffect(() => {
-		btnMenu();
+		btnMenuPurple();
+		btnMenuRed();
+		btnMenuOrange();
+		btnMenuYellow();
+		btnMenuGreen();
+		btnMenuBlue();
 	}, []);
 	const [quiz, setQuiz] = useState([
 		{
@@ -178,8 +183,8 @@ const App = () => {
 	]);
 
 	// console.log(quiz);
-	const btnMenu = () => {
-		const btnMenu = Array.from(document.querySelectorAll('.btn-menu'));
+	const btnMenuPurple = () => {
+		const btnMenu = Array.from(document.querySelectorAll('.btn-menu-purple'));
 		console.log(btnMenu);
 
 		const onBtnMenu = (addHover) => {
@@ -187,6 +192,101 @@ const App = () => {
 				btns.classList.remove('bg-purple-400');
 			});
 			addHover.classList.add('bg-purple-400');
+		};
+
+		btnMenu.map((btns) => {
+			btns.addEventListener('click', (e) => {
+				console.log(e.target);
+				onBtnMenu(e.target);
+			});
+		});
+	};
+
+	const btnMenuRed = () => {
+		const btnMenu = Array.from(document.querySelectorAll('.btn-menu-red'));
+		console.log(btnMenu);
+
+		const onBtnMenu = (addHover) => {
+			btnMenu.map((btns) => {
+				btns.classList.remove('bg-red-400');
+			});
+			addHover.classList.add('bg-red-400');
+		};
+
+		btnMenu.map((btns) => {
+			btns.addEventListener('click', (e) => {
+				console.log(e.target);
+				onBtnMenu(e.target);
+			});
+		});
+	};
+
+	const btnMenuOrange = () => {
+		const btnMenu = Array.from(document.querySelectorAll('.btn-menu-orange'));
+		console.log(btnMenu);
+
+		const onBtnMenu = (addHover) => {
+			btnMenu.map((btns) => {
+				btns.classList.remove('bg-orange-400');
+			});
+			addHover.classList.add('bg-orange-400');
+		};
+
+		btnMenu.map((btns) => {
+			btns.addEventListener('click', (e) => {
+				console.log(e.target);
+				onBtnMenu(e.target);
+			});
+		});
+	};
+
+	const btnMenuYellow = () => {
+		const btnMenu = Array.from(document.querySelectorAll('.btn-menu-yellow'));
+		console.log(btnMenu);
+
+		const onBtnMenu = (addHover) => {
+			btnMenu.map((btns) => {
+				btns.classList.remove('bg-yellow-600');
+			});
+			addHover.classList.add('bg-yellow-600');
+		};
+
+		btnMenu.map((btns) => {
+			btns.addEventListener('click', (e) => {
+				console.log(e.target);
+				onBtnMenu(e.target);
+			});
+		});
+	};
+
+	const btnMenuGreen = () => {
+		const btnMenu = Array.from(document.querySelectorAll('.btn-menu-green'));
+		console.log(btnMenu);
+
+		const onBtnMenu = (addHover) => {
+			btnMenu.map((btns) => {
+				btns.classList.remove('bg-green-400');
+			});
+			addHover.classList.add('bg-green-400');
+		};
+
+		btnMenu.map((btns) => {
+			btns.addEventListener('click', (e) => {
+				console.log(e.target);
+				onBtnMenu(e.target);
+			});
+		});
+	};
+
+	const btnMenuBlue = () => {
+		const btnMenu = Array.from(document.querySelectorAll('.btn-menu-blue'));
+		console.log(btnMenu);
+
+		const onBtnMenu = (addHover) => {
+			btnMenu.map((btns) => {
+				btns.classList.remove('bg-blue-400');
+			});
+			addHover.classList.add('bg-blue-400');
 		};
 
 		btnMenu.map((btns) => {
@@ -208,7 +308,7 @@ const App = () => {
 					<div className="bg-purple-800 p-6 mb-6">
 						{quiz[0].questionOne.map((q) => (
 							<div key={q.id}>
-								<div className="btn-menu">
+								<div className="btn-menu-purple">
 									{q.letter}
 									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
@@ -221,7 +321,7 @@ const App = () => {
 					<div className="bg-red-800 p-6 mb-6">
 						{quiz[1].questionTwo.map((q) => (
 							<div key={q.id}>
-								<div className="btn-menu">
+								<div className="btn-menu-red">
 									{q.letter}
 									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
@@ -234,7 +334,7 @@ const App = () => {
 					<div className="bg-orange-800 p-6 mb-6">
 						{quiz[2].questionThree.map((q) => (
 							<div key={q.id}>
-								<div className="btn-menu">
+								<div className="btn-menu-orange">
 									{q.letter}
 									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
@@ -247,7 +347,7 @@ const App = () => {
 					<div className="bg-yellow-800 p-6 mb-6">
 						{quiz[3].questionFour.map((q) => (
 							<div key={q.id}>
-								<div className="btn-menu">
+								<div className="btn-menu-yellow">
 									{q.letter}
 									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
@@ -260,7 +360,7 @@ const App = () => {
 					<div className="bg-green-800 p-6 mb-6">
 						{quiz[4].questionFive.map((q) => (
 							<div key={q.id}>
-								<div className="btn-menu">
+								<div className="btn-menu-green">
 									{q.letter}
 									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
@@ -273,7 +373,7 @@ const App = () => {
 					<div className="bg-blue-800 p-6 mb-6">
 						{quiz[5].questionSix.map((q) => (
 							<div key={q.id}>
-								<div className="btn-menu">
+								<div className="btn-menu-blue">
 									{q.letter}
 									&nbsp;&nbsp;&nbsp;{q.question}
 								</div>
