@@ -245,10 +245,10 @@ const App = () => {
 
 		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
-				console.log(e.target);
+				// console.log(e.target);
 				onBtnMenu(e.target);
 
-				console.log(e.target.classList[1]);
+				// console.log(e.target.classList[1]);
 
 				if (e.target.classList[1] === 'jmXBVMIZVxeVU0tWv8yV') {
 					setPurpleGroup(1);
@@ -276,10 +276,10 @@ const App = () => {
 
 		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
-				console.log(e.target);
+				// console.log(e.target);
 				onBtnMenu(e.target);
 
-				console.log(e.target.classList[1]);
+				// console.log(e.target.classList[1]);
 
 				if (e.target.classList[1] === 'dYW4pmSuQfxEDHtOTdx2') {
 					setRedGroup(0);
@@ -307,10 +307,10 @@ const App = () => {
 
 		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
-				console.log(e.target);
+				// console.log(e.target);
 				onBtnMenu(e.target);
 
-				console.log(e.target.classList[1]);
+				// console.log(e.target.classList[1]);
 
 				if (e.target.classList[1] === 'UpV4D9hZQCQ2nW0NYufS') {
 					setOrangeGroup(0);
@@ -338,10 +338,10 @@ const App = () => {
 
 		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
-				console.log(e.target);
+				// console.log(e.target);
 				onBtnMenu(e.target);
 
-				console.log(e.target.classList[1]);
+				// console.log(e.target.classList[1]);
 
 				if (e.target.classList[1] === 'euy8enFogCOqVEnrIFxQ') {
 					setYellowGroup(1);
@@ -369,10 +369,10 @@ const App = () => {
 
 		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
-				console.log(e.target);
+				// console.log(e.target);
 				onBtnMenu(e.target);
 
-				console.log(e.target.classList[1]);
+				// console.log(e.target.classList[1]);
 
 				if (e.target.classList[1] === '6YPT7EmNzdKcSNn4m0qb') {
 					setGreenGroup(0);
@@ -400,10 +400,10 @@ const App = () => {
 
 		btnMenu.map((btns) => {
 			btns.addEventListener('click', (e) => {
-				console.log(e.target);
+				// console.log(e.target);
 				onBtnMenu(e.target);
 
-				console.log(e.target.classList[1]);
+				// console.log(e.target.classList[1]);
 
 				if (e.target.classList[1] === 'zbUsNZ2qIXNRBtm4JTLX') {
 					setBlueGroup(1);
@@ -508,9 +508,13 @@ const App = () => {
 					</button>
 				</section>
 			</main>
-			<section>
-				<section className="hidden total">You scored a Total of {total}/6</section>
-				<button onClick={tryAgain} className="try-again hidden">
+			<section className="container mx-auto bg-gray-100 p-6 total hidden">
+				<section className="mb-6">
+					<h1 className="text-center text-gray-900 text-3xl">
+						Your final score {total}/<strong>6</strong>
+					</h1>
+				</section>
+				<button onClick={tryAgain} className="try-again hidden bg-pink-700 hover:bg-pink-600 w-full p-3 text-white">
 					Try Again
 				</button>
 			</section>
